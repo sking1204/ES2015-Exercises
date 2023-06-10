@@ -7,10 +7,13 @@ let {numPlanets, yearNeptuneDiscovered} = facts;
 console.log(numPlanets); // ?
 console.log(yearNeptuneDiscovered); // ?
 
-8
-1846
+-8
+-1846
 
 */
+
+
+
 
 /* 
 Object Destructuring 2:
@@ -23,10 +26,18 @@ let planetFacts = {
 let {numPlanets, ...discoveryYears} = planetFacts;
 
 console.log(discoveryYears); // ?
+
+-yearNeptuneDiscovered:1846
+-yearMarsDiscovered:1659
+
 */
+
+
 
 /* 
 Object Destructuring 3:
+
+What does the following code return/print.
 function getUserData({firstName, favoriteColor="green"}){
   return `Your name is ${firstName} and you like ${favoriteColor}`;
 }
@@ -34,16 +45,33 @@ function getUserData({firstName, favoriteColor="green"}){
 getUserData({firstName: "Alejandro", favoriteColor: "purple"}) // ?
 getUserData({firstName: "Melissa"}) // ?
 getUserData({}) // ?
-*/
+
+-Your name is Alejandro and you like purple
+-Your name is Melissa and you like green
+-your name is undefined and you like green
+
+
 
 /* 
+ 
+
+
+
+
 Array Destructuring 1:
 let [first, second, third] = ["Maya", "Marisa", "Chi"];
 
 console.log(first); // ?
 console.log(second); // ?
 console.log(third); // ?
+
+-Maya
+-Marisa
+-Chi 
+
+
 */
+
 
 /* 
 Array Destructuring 2:
@@ -58,6 +86,12 @@ let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
 console.log(raindrops); // ?
 console.log(whiskers); // ?
 console.log(aFewOfMyFavoriteThings); // ?
+
+-Raindrops on roses
+-whiskers on kittens
+-bright copper kettles, warm woolen mittens,brown paper packages tied up with strings
+
+
 */
 
 /* 
@@ -65,8 +99,16 @@ Array Descructuring 3
 let numbers = [10, 20, 30];
 [numbers[1], numbers[2]] = [numbers[2], numbers[1]]
 
+
+
 console.log(numbers) // ?
+__
+
+  [30,20]
+__
+
 */
+
 
 /* 
 ES2015 Refactoring
@@ -83,6 +125,16 @@ var b = obj.numbers.b;
 
 /* Write an ES2015 Version */
 
+**REVIEW
+
+const obj ={
+  numbers:{
+    a:1,
+    b:2
+  }
+}
+
+const{a,b}=obj.numbers
 
 /* 
 ES5 Array Swap
@@ -93,6 +145,12 @@ arr[0] = arr[1];
 arr[1] = temp; */
 
 /* Write an ES2015 Version */
+
+
+**REVIEW
+let arr =[1,2]
+[arr[0], arr[1]]=[arr[1],arr[0]]
+
 
 /* ## **raceResults()**
 
@@ -120,6 +178,7 @@ raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre'])
   }
 */
 
+raceResults = ["Tom","Margaret","Allison","David","Pierre"]
 
+const raceResults =([first,second,third,...rest]) =>({first,second,third,...rest})
 
-*/
