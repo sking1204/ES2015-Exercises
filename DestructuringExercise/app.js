@@ -104,7 +104,7 @@ let numbers = [10, 20, 30];
 console.log(numbers) // ?
 __
 
-  [30,20]
+  [10,30,20]
 __
 
 */
@@ -125,16 +125,16 @@ var b = obj.numbers.b;
 
 /* Write an ES2015 Version */
 
-**REVIEW
-
-const obj ={
-  numbers:{
-    a:1,
-    b:2
-  }
+const obj=
+{numbers:
+  {
+  a:1,
+  b:2
+}
 }
 
-const{a,b}=obj.numbers
+const {a,b} =obj.numbers;
+
 
 /* 
 ES5 Array Swap
@@ -146,10 +146,15 @@ arr[1] = temp; */
 
 /* Write an ES2015 Version */
 
-
-**REVIEW
 let arr =[1,2]
-[arr[0], arr[1]]=[arr[1],arr[0]]
+
+
+arr =[arr[0], arr[1]] = [arr[1], arr[0]]
+
+
+
+// console.log(arr) // ?
+
 
 
 /* ## **raceResults()**
@@ -171,14 +176,40 @@ raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre'])
 
 /*
   {
-    first: "Tom",
-    second: "Margaret",
-    third: "Allison",
+     first: "Tom",
+     second: "Margaret",
+     third: "Allison",
     rest: ["David", "Pierre"]
-  }
+  // }
 */
 
-raceResults = ["Tom","Margaret","Allison","David","Pierre"]
 
-const raceResults =([first,second,third,...rest]) =>({first,second,third,...rest})
+// function raceResults(arr){
+//   return {first,second,third,rest}
+// }
+
+// const results =['Tom', 'Margaret', 'Allison', 'David', 'Pierre']
+// const [first,second,third,...rest]=results;
+
+// function raceResults(arr){
+//   return ({first,second,third,rest})
+// }
+
+//how do I return the results of the array
+
+
+
+// const results =['Tom', 'Margaret', 'Allison', 'David', 'Pierre'] 
+// const [first,second,third,...rest]=results;
+// const resultObj = {first,second,third,rest}
+
+// function raceResults([first,second,third,...rest]){
+//   return ({first,second,third,rest})
+// }
+
+//not 100% sure on solution: discuss with mentor!!
+
+const raceResults = ([first, second, third, ...rest]) => ({first, second, third, rest})
+
+
 
