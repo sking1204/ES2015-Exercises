@@ -87,8 +87,33 @@ Write a function called vowelCount which accepts a string and returns a map wher
 */
 
 // function vowelCount(str){
-//     let chars =str.split('') 
+//     let m= new Map();
+//    return m.set(str.split('') )
 // }
+// }
+
+
+
+
+function isVowel(char){
+  return "aeiou".includes(char);
+}
+
+function vowelCount(str){
+  const vowelMap = new Map();
+  for(let char of str){
+    let lowerCaseChar = char.toLowerCase()
+    if(isVowel(lowerCaseChar)){
+      if(vowelMap.has(lowerCaseChar)){
+        vowelMap.set(lowerCaseChar, vowelMap.get(lowerCaseChar) + 1);
+      } else {
+        vowelMap.set(lowerCaseChar, 1);
+      }
+    }
+  }
+  return vowelMap;
+}
+
 
 
 // function vowelCount(str){
@@ -100,6 +125,23 @@ Write a function called vowelCount which accepts a string and returns a map wher
 
 
 
+function vowelCount(str){
+    function isVowel(char){
+        return "aeiou".includes(char)
+    }
+const count = new Map();
+for(let char of str){
+    let lowerChar=char.toLowerCase()
+    if(isVowel(lowerChar)){
+        if(count.has(lowerChar)){
+            count.set(lowerChar, count.get(lowerChar) +1);
+        }else{
+            count.set(lowerChar,1);
+        }
+    }
+}
+return count;
+}
 
 
 

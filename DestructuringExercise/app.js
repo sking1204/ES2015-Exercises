@@ -57,7 +57,7 @@ getUserData({}) // ?
 
 
 
-
+//4.
 Array Destructuring 1:
 let [first, second, third] = ["Maya", "Marisa", "Chi"];
 
@@ -72,7 +72,7 @@ console.log(third); // ?
 
 */
 
-
+//5.
 /* 
 Array Destructuring 2:
 let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
@@ -93,7 +93,7 @@ console.log(aFewOfMyFavoriteThings); // ?
 
 
 */
-
+//6.
 /* 
 Array Descructuring 3
 let numbers = [10, 20, 30];
@@ -109,7 +109,7 @@ __
 
 */
 
-
+//7.
 /* 
 ES2015 Refactoring
 
@@ -135,7 +135,7 @@ const obj=
 
 const {a,b} =obj.numbers;
 
-
+//8.
 /* 
 ES5 Array Swap
 
@@ -159,7 +159,7 @@ arr =[arr[0], arr[1]] = [arr[1], arr[0]]
 
 /* ## **raceResults()**
 
-Write a function called ***raceResults*** which accepts a single array argument. It should return an object with the keys ***first***, ***second***, ***third***, and ***rest***.
+9.Write a function called ***raceResults*** which accepts a single array argument. It should return an object with the keys ***first***, ***second***, ***third***, and ***rest***.
 
 - first: the first element in the array
 - second: the second element in the array
